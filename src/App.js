@@ -81,57 +81,57 @@ const App = () => {
   };
 
   return (
-   
-      <div className="App">
-        <div className="login-container">
-          <h2>Login</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="email">Email:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
 
-            <div className="form-group">
-              <label htmlFor="password">Password:</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </div>
+    <div className="App">
+      <div className="login-container">
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
 
-            <button type="submit" style={{ backgroundColor: 'blue', color: 'white' }}>
-              Login
-            </button>
-          </form>
+          <div className="form-group">
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
 
-          <p>
-            Don't have an account? <Link to="/registration">Register</Link>
+          <button type="submit" style={{ backgroundColor: 'blue', color: 'white' }}>
+            Login
+          </button>
+        </form>
 
-          </p>
-        </div>
+        <p>
+          Don't have an account? <Link to="/registration">Register</Link>
 
-        {loggedInUser && (
-  <div style={{ marginTop: '20px' }}>
-    <h3>User Information:</h3>
-    <p>Name: {loggedInUser.firstName} {loggedInUser.lastName}</p>
-    <p>Age: {loggedInUser.age}</p>
-    <p>Email: {loggedInUser.email}</p>
-  </div>
-)}
-
+        </p>
       </div>
-   
+
+      {loggedInUser && (
+        <div style={{ marginTop: '20px' }}>
+          <h3>User Information:</h3>
+          <p>Name: {loggedInUser.firstName} {loggedInUser.lastName}</p>
+          <p>Age: {loggedInUser.age}</p>
+          <p>Email: {loggedInUser.email}</p>
+        </div>
+      )}
+
+    </div>
+
   );
 };
 
